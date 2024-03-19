@@ -16,7 +16,7 @@ public class ParticipantValidator implements Validator<Participant> {
         if (Objects.equals(entity.getName(), "")) {
             throw new RuntimeException("Name can't be nunll");
         }
-        if (entity.getTrials().length == 0) {
+        if (entity.getTrials().isEmpty()) {
             throw new RuntimeException("There must be at least 1 trial");
         }
     }

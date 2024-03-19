@@ -14,5 +14,4 @@ public interface TrialRepository<T, Id> {
 
     List<T> findAllTrial();
 
-    Collection<T> getAllTrial();
 }

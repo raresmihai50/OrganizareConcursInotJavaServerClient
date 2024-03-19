@@ -1,10 +1,22 @@
 package org.example.domain;
 
-public class Participant implements Entity<Integer>{
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Participant implements Entity<Integer> {
     private int id;
     private String name;
     private int age;
-    private Trial[] trials;
+    private List<Trial> trials;
+
+    public Participant(int id, String name, int age, List<Trial> trials) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.trials = trials;
+    }
+
     @Override
     public Integer getId() {
         return id;
@@ -14,22 +26,33 @@ public class Participant implements Entity<Integer>{
     public void setId(Integer integer) {
         id = integer;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    public void setName(String string){
+
+    public void setName(String string) {
         name = string;
     }
-    public int getAge(){
+
+    public int getAge() {
         return age;
     }
-    public void setAge(Integer integer){
+
+    public void setAge(Integer integer) {
         age = integer;
     }
-    public Trial[] getTrials(){
+
+    public List<Trial> getTrials() {
         return trials;
     }
-    public void setTrials(Trial[] events){
+
+    public void setTrials(List<Trial> events) {
         trials = events;
+    }
+
+    @Override
+    public String toString() {
+        return "Id=" + id + " " + name + ' ' + age + ' ' + trials.toString();
     }
 }

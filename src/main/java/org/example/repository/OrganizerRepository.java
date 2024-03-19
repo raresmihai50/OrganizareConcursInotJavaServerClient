@@ -14,5 +14,4 @@ public interface OrganizerRepository<T,Id> {
 
     List<T> findAllOrganizer();
 
-    Collection<T> getAllOrganizer();
 }

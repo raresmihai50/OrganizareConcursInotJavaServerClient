@@ -14,5 +14,4 @@ public interface ParticipantRepository<T, Id> {
 
     List<T> findAllParticipant();
 
-    Collection<T> getAllParticipant();
 }

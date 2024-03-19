@@ -6,6 +6,13 @@ public class Trial implements Entity<Integer> {
     private int id;
     private String type;
     private String details;
+
+    public Trial(int id, String type, String details) {
+        this.id = id;
+        this.type = type;
+        this.details = details;
+    }
+
     @Override
     public Integer getId() {
         return id;
@@ -15,17 +22,26 @@ public class Trial implements Entity<Integer> {
     public void setId(Integer integer) {
         id = integer;
     }
-    public String gettype(){
+
+    public String gettype() {
         return type;
     }
-    public void settype(String string){
+
+    public void settype(String string) {
         type = string;
     }
-    public String getdetails(){
+
+    public String getdetails() {
         return details;
     }
-    public void setdetails(String string){
+
+    public void setdetails(String string) {
         details = string;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Id=" + id + " " + type + ' ' + details;
+    }
+
 }
