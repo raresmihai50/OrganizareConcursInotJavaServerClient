@@ -34,7 +34,7 @@ dependencies {
 }
 
 application{
-    mainClass = 'org.example.Main'
+    mainClass = 'org.example.MainUI'
 }
 
 jar{
