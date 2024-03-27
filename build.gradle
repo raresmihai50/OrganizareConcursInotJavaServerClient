@@ -1,6 +1,8 @@
 plugins {
     id 'java'
     id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+
 }
 group 'StartGradle'
 version '1.0'
@@ -11,6 +13,10 @@ version '1.0'
 repositories {
     mavenCentral()
 }
+javafx {
+    modules = [ 'javafx.controls' , 'javafx.fxml']
+}
+
 
 dependencies {
     //implementation project(path: ':')
@@ -28,7 +34,7 @@ dependencies {
 }
 
 application{
-    mainClass = 'Main'
+    mainClass = 'org.example.Main'
 }
 
 jar{

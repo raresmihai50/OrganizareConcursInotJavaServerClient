@@ -30,5 +30,6 @@ public class Main {
         //lst.add(trrepo.findByIdTrial(1));
         //partrepo.addParticipant(new Participant(1, "Radu", 20, lst));
         //System.out.println(partrepo.findByIdParticipant(1).toString());
+        System.out.println("It's working !!!");
     }
 }
