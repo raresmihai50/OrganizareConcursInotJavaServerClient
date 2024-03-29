@@ -95,16 +95,16 @@ public class ParticipantDBRepository implements ParticipantRepository<Participan
         return participant;
     }
 
-    private List<Trial> findParticipantTrialsById(Integer integer) {
-        logger.traceEntry("finding task with id {} ", integer);
+    private List<Trial> findParticipantTrialsById(Integer participantId) {
+        logger.traceEntry("finding trials for participant with id {}", participantId);
         Connection con = dbUtils.getConnection();
-        List<Trial> trials = new ArrayList<Trial>();
-        try (PreparedStatement preStmt = con.prepareStatement("SELECT * FROM Participant_Trial WHERE id_participant=?")) {
-            preStmt.setInt(1, integer);
+        List<Trial> trials = new ArrayList<>();
+        try (PreparedStatement preStmt = con.prepareStatement("SELECT id_trial FROM Participant_Trial WHERE id_participant=?")) {
+            preStmt.setInt(1, participantId);
             try (ResultSet result = preStmt.executeQuery()) {
-                if (result.next()) {
-                    int id_trial = result.getInt("id_trial");
-                    trials.add(trRepo.findByIdTrial(id_trial));
+                while (result.next()) {
+                    int trialId = result.getInt("id_trial");
+                    trials.add(trRepo.findByIdTrial(trialId));
                 }
             }
         } catch (SQLException e) {
@@ -112,9 +112,8 @@ public class ParticipantDBRepository implements ParticipantRepository<Participan
         }
         logger.traceExit(trials);
         return trials;
-
-
     }
+
 
     @Override
     public List<Participant> findAllParticipant() {

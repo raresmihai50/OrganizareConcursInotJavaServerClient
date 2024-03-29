@@ -72,6 +72,27 @@ public class TrialDBRepository implements TrialRepository<Trial,Integer>{
         return trial;
     }
 
+    public Trial findByTypeDetailsTrial(String type, String details) {
+        logger.traceEntry("finding task with type and details {}, {}", type, details);
+        Connection con = dbUtils.getConnection();
+        Trial trial = null;
+        try (PreparedStatement preStmt = con.prepareStatement("SELECT * FROM Trial WHERE type = ? AND details = ?")) {
+            preStmt.setString(1, type);
+            preStmt.setString(2,details);
+            try (ResultSet result = preStmt.executeQuery()) {
+                if (result.next()) {
+                    int id = result.getInt("id");
+                    trial = new Trial(id, type, details);
+                }
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+            System.err.println("Error DB " + e);
+        }
+        logger.traceExit(trial);
+        return trial;
+    }
+
     @Override
     public List<Trial> findAllTrial() {
         logger.traceEntry();

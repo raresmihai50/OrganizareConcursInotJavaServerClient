@@ -41,7 +41,7 @@ public class Trial implements Entity<Integer> {
 
     @Override
     public String toString() {
-        return "Id=" + id + " " + type + ' ' + details;
+        return "Type: " + type + ' ' + "Details: " + details;
     }
 
 }

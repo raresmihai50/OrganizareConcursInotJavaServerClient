@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="439.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.AddParticipantViewController">
+   <children>
+      <TextField fx:id="name_txtfld" layoutX="226.0" layoutY="133.0" prefHeight="26.0" prefWidth="198.0" promptText="name">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="age_txtfld" layoutX="226.0" layoutY="188.0" prefHeight="26.0" prefWidth="198.0" promptText="age">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <CheckBox fx:id="distance_cb" layoutX="225.0" layoutY="235.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" text="Distance" />
+      <CheckBox fx:id="style_cb" layoutX="226.0" layoutY="299.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="59.0" text="Style" />
+      <CheckBox fx:id="cb_50m" layoutX="379.0" layoutY="231.0" mnemonicParsing="false" text="50m" />
+      <CheckBox fx:id="cb_200m" layoutX="379.0" layoutY="252.0" mnemonicParsing="false" text="200m" />
+      <CheckBox fx:id="cb_800m" layoutX="438.0" layoutY="231.0" mnemonicParsing="false" text="800m" />
+      <CheckBox fx:id="cb_1500m" layoutX="438.0" layoutY="252.0" mnemonicParsing="false" text="1500m" />
+      <CheckBox fx:id="cb_freestyle" layoutX="379.0" layoutY="299.0" mnemonicParsing="false" text="Freestyle" />
+      <CheckBox fx:id="cb_butterfly" layoutX="460.0" layoutY="299.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="78.0" text="Butterfly" />
+      <CheckBox fx:id="cb_backstroke" layoutX="378.0" layoutY="328.0" mnemonicParsing="false" text="Backstroke" />
+      <CheckBox fx:id="cb_individual" layoutX="461.0" layoutY="328.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="88.0" text="Individual" />
+      <Button fx:id="add_btn" layoutX="225.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleAddParticipant" text="Add Participant" />
+      <Button fx:id="cancel_btn" layoutX="225.0" layoutY="383.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+   </children>
+</AnchorPane>

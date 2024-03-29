@@ -53,7 +53,7 @@ public class OrganizerDBRepository implements OrganizerRepository<Organizer, Int
 
     @Override
     public Organizer findByIdOrganizer(Integer integer) {
-        logger.traceEntry("finding task with id {} ", integer);
+        logger.traceEntry("finding organizer task with id {} ", integer);
         Connection con = dbUtils.getConnection();
         Organizer organizer = null;
         try (PreparedStatement preStmt = con.prepareStatement("SELECT * FROM Organizer WHERE id=?")) {
@@ -63,6 +63,27 @@ public class OrganizerDBRepository implements OrganizerRepository<Organizer, Int
                     String username = result.getString("username");
                     String password = result.getString("password");
                     organizer = new Organizer(integer, username, password);
+                }
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+            System.err.println("Error DB " + e);
+        }
+        logger.traceExit(organizer);
+        return organizer;
+
+    }
+    public Organizer findByUsernameOrganizer(String username) {
+        logger.traceEntry("finding organizer task with username {} ", username);
+        Connection con = dbUtils.getConnection();
+        Organizer organizer = null;
+        try (PreparedStatement preStmt = con.prepareStatement("SELECT * FROM Organizer WHERE username=?")) {
+            preStmt.setString(1, username);
+            try (ResultSet result = preStmt.executeQuery()) {
+                if (result.next()) {
+                    int id = result.getInt("id");
+                    String password = result.getString("password");
+                    organizer = new Organizer(id, username, password);
                 }
             }
         } catch (SQLException e) {

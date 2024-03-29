@@ -3,11 +3,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.LoginController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.LogInViewController">
    <children>
-      <Button fx:id="login_btn" layoutX="268.0" layoutY="265.0" mnemonicParsing="false" text="Log In" />
-      <TextField fx:id="id_fld" layoutX="225.0" layoutY="115.0" />
-      <TextField fx:id="username_fld" layoutX="225.0" layoutY="152.0" />
-      <PasswordField fx:id="password_fld" layoutX="226.0" layoutY="188.0" />
+      <Button fx:id="login_btn" layoutX="275.0" layoutY="265.0" mnemonicParsing="false" onAction="#handleLogIn" text="Log In" />
+      <TextField fx:id="username_fld" layoutX="171.0" layoutY="120.0" prefHeight="52.0" prefWidth="258.0" />
+      <PasswordField fx:id="password_fld" layoutX="170.0" layoutY="188.0" prefHeight="52.0" prefWidth="258.0" />
+      <Button fx:id="exit_btn" layoutX="282.0" layoutY="299.0" mnemonicParsing="false" onAction="#handleExit" text="Exit" />
    </children>
 </AnchorPane>

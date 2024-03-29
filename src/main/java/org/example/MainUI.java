@@ -4,7 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.example.controller.LoginController;
+import org.example.controller.LogInViewController;
 import org.example.repository.OrganizerDBRepository;
 import org.example.repository.ParticipantDBRepository;
 import org.example.repository.TrialDBRepository;
@@ -30,7 +30,7 @@ public class MainUI extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(MainUI.class.getResource("/login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 340);
-        LoginController ctr = fxmlLoader.getController();
+        LogInViewController ctr = fxmlLoader.getController();
         ctr.initLoginController(serv);
         stage.setTitle("Login");
         stage.setScene(scene);
