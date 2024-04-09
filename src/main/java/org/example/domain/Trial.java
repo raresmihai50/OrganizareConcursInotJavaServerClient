@@ -2,6 +2,8 @@ package org.example.domain;
 
 import org.example.domain.Entity;
 
+import java.util.Objects;
+
 public class Trial implements Entity<Integer> {
     private int id;
     private String type;
@@ -42,6 +44,17 @@ public class Trial implements Entity<Integer> {
     @Override
     public String toString() {
         return "Type: " + type + ' ' + "Details: " + details;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Trial other = (Trial) obj;
+        return Objects.equals(this.id, other.id);
     }
 
 }

@@ -2,9 +2,11 @@ package org.example.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -22,6 +24,8 @@ import java.util.List;
 
 public class OrganizerViewController {
     @FXML
+    public Button search_btn;
+    @FXML
     Label organizer_username_lbl;
     @FXML
     TableView<Participant> participantsTable;
@@ -33,6 +37,8 @@ public class OrganizerViewController {
     TableColumn<Participant, Integer> age_col;
     @FXML
     TableColumn<Participant, List<Trial>> trials_col;
+    @FXML
+    Button reload_btn;
     @FXML
     public ObservableList<Participant> obs_lst = FXCollections.observableArrayList();
     @FXML
@@ -85,4 +91,30 @@ public class OrganizerViewController {
             e.printStackTrace();
         }
     }
+    public void handleSearchBtn(){
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(MainUI.class.getResource("/search-view.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(fxmlLoader.load(), 620, 550);
+            stage.setScene(scene);
+
+            Stage dialogStage = new Stage();
+            dialogStage.setTitle("Search Participants");
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            //dialogStage.initOwner(primaryStage);
+            dialogStage.setScene(scene);
+
+            SearchViewController searchViewController = fxmlLoader.getController();
+            searchViewController.initSearchViewController(serv, dialogStage);
+            dialogStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public void handleReload(){
+        loadParticipantsTable();
+    }
+
 }

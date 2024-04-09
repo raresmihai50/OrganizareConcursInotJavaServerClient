@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.SearchViewController">
+    <CheckBox fx:id="distance_cb" layoutX="127.0" layoutY="35.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" text="Distance" />
+    <CheckBox fx:id="style_cb" layoutX="127.0" layoutY="72.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="59.0" text="Style" />
+    <CheckBox fx:id="cb_50m" layoutX="243.0" layoutY="39.0" mnemonicParsing="false" text="50m" />
+    <CheckBox fx:id="cb_200m" layoutX="290.0" layoutY="39.0" mnemonicParsing="false" text="200m" />
+    <CheckBox fx:id="cb_800m" layoutX="343.0" layoutY="39.0" mnemonicParsing="false" text="800m" />
+    <CheckBox fx:id="cb_1500m" layoutX="396.0" layoutY="39.0" mnemonicParsing="false" text="1500m" />
+    <CheckBox fx:id="cb_freestyle" layoutX="243.0" layoutY="72.0" mnemonicParsing="false" text="Freestyle" />
+    <CheckBox fx:id="cb_butterfly" layoutX="313.0" layoutY="72.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="78.0" text="Butterfly" />
+    <CheckBox fx:id="cb_backstroke" layoutX="462.0" layoutY="72.0" mnemonicParsing="false" text="Backstroke" />
+    <CheckBox fx:id="cb_individual" layoutX="382.0" layoutY="72.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="88.0" text="Individual" />
+    <TableView fx:id="participantsTable" layoutY="113.0" prefHeight="286.0" prefWidth="653.0">
+        <columns>
+            <TableColumn fx:id="id_col" prefWidth="106.20001602172852" text="id" />
+            <TableColumn fx:id="name_col" prefWidth="120.20001220703125" text="name" />
+            <TableColumn fx:id="age_col" prefWidth="73.60005187988281" text="age" />
+            <TableColumn fx:id="trials_col" prefWidth="353.0000305175781" text="trials" />
+        </columns>
+    </TableView>
+   <Button fx:id="search_btn" layoutX="34.0" layoutY="49.0" mnemonicParsing="false" onAction="#handleSearch" text="Search" />
+   <Button fx:id="exit_btn" layoutX="556.0" layoutY="49.0" mnemonicParsing="false" onAction="#handleExit" prefHeight="26.0" prefWidth="46.0" text="Exit" />
+
+</AnchorPane>

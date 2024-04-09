@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -57,7 +58,6 @@ public class LogInViewController {
 
     @FXML
     public void handleExit() {
-        System.out.println(serv.findParticipantById(2).getTrials());
         exit(0);
     }
 
@@ -73,6 +73,9 @@ public class LogInViewController {
             } else {
                 MessageAlert.showErrorMessage(null, "Wrong Password !");
             }
+        }
+        else {
+            MessageAlert.showErrorMessage(null, "Username doesn't exist !");
         }
     }
 }
