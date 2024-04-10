@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -50,7 +51,7 @@ public class SearchViewController {
     @FXML
     TableColumn<Participant, Integer> age_col;
     @FXML
-    TableColumn<Participant, List<Trial>> trials_col;
+    TableColumn<Participant, Integer> trials_col;
     @FXML
     public ObservableList<Participant> obs_lst = FXCollections.observableArrayList();
     @FXML
@@ -141,7 +142,12 @@ public class SearchViewController {
         id_col.setCellValueFactory(new PropertyValueFactory<Participant, Integer>("id"));
         name_col.setCellValueFactory(new PropertyValueFactory<Participant, String>("name"));
         age_col.setCellValueFactory(new PropertyValueFactory<Participant, Integer>("age"));
-        trials_col.setCellValueFactory(new PropertyValueFactory<Participant, List<Trial>>("trials"));
+        //trials_col.setCellValueFactory(new PropertyValueFactory<Participant, List<Trial>>("trials"));
+        trials_col.setCellValueFactory(cellData -> {
+            List<Trial> trials = cellData.getValue().getTrials();
+            Integer trialsSize = trials != null ? trials.size() : 0;
+            return new SimpleIntegerProperty(trialsSize).asObject();
+        });
         participantsTable.setItems(obs_lst);
     }
     public void handleSearch() {
