@@ -3700,3 +3700,89 @@
 10 Apr 2024 12:50:53,107 INFO  org.example.repository.OrganizerDBRepository 22 <init> - Initializing OrganizerDBRepository with properties: {jdbc.url=jdbc:sqlite:D:/downloads/Faculta_2_Sem_2/MPP/BazaDeDateConcursInot/identifier.sqlite} 
 10 Apr 2024 12:50:53,111 INFO  org.example.repository.TrialDBRepository 23 <init> - Initializing TrialDBRepository with properties: {jdbc.url=jdbc:sqlite:D:/downloads/Faculta_2_Sem_2/MPP/BazaDeDateConcursInot/identifier.sqlite} 
 10 Apr 2024 12:50:53,112 INFO  org.example.repository.ParticipantDBRepository 24 <init> - Initializing ParticipantDBRepository with properties: {jdbc.url=jdbc:sqlite:D:/downloads/Faculta_2_Sem_2/MPP/BazaDeDateConcursInot/identifier.sqlite} 
+16 Apr 2024 15:55:47,499 INFO  org.example.repository.OrganizerDBRepository 22 <init> - Initializing OrganizerDBRepository with properties: {jdbc.url=jdbc:sqlite:D:/downloads/Faculta_2_Sem_2/MPP/BazaDeDateConcursInot/identifier.sqlite} 
+16 Apr 2024 15:55:47,505 INFO  org.example.repository.TrialDBRepository 23 <init> - Initializing TrialDBRepository with properties: {jdbc.url=jdbc:sqlite:D:/downloads/Faculta_2_Sem_2/MPP/BazaDeDateConcursInot/identifier.sqlite} 
+16 Apr 2024 15:55:47,507 INFO  org.example.repository.ParticipantDBRepository 24 <init> - Initializing ParticipantDBRepository with properties: {jdbc.url=jdbc:sqlite:D:/downloads/Faculta_2_Sem_2/MPP/BazaDeDateConcursInot/identifier.sqlite} 
+16 Apr 2024 15:55:54,262 TRACE org.example.repository.OrganizerDBRepository 77 findByUsernameOrganizer - Enter finding organizer task with username Rares 
+16 Apr 2024 15:55:54,262 TRACE org.example.JdbcUtils 48 getConnection - Enter
+16 Apr 2024 15:55:54,263 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+16 Apr 2024 15:55:54,263 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:D:/downloads/Faculta_2_Sem_2/MPP/BazaDeDateConcursInot/identifier.sqlite
+16 Apr 2024 15:55:54,263 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+16 Apr 2024 15:55:54,263 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+16 Apr 2024 15:55:54,472 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@69eab8cc)
+16 Apr 2024 15:55:54,482 TRACE org.example.repository.OrganizerDBRepository 93 findByUsernameOrganizer - Exit with(Id=1 Rares 123)
+16 Apr 2024 15:55:54,531 TRACE org.example.repository.ParticipantDBRepository 120 findAllParticipant - Enter
+16 Apr 2024 15:55:54,531 TRACE org.example.JdbcUtils 48 getConnection - Enter
+16 Apr 2024 15:55:54,531 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+16 Apr 2024 15:55:54,532 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:D:/downloads/Faculta_2_Sem_2/MPP/BazaDeDateConcursInot/identifier.sqlite
+16 Apr 2024 15:55:54,532 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+16 Apr 2024 15:55:54,532 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+16 Apr 2024 15:55:54,533 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7347f129)
+16 Apr 2024 15:55:54,535 TRACE org.example.repository.ParticipantDBRepository 99 findParticipantTrialsById - Enter finding trials for participant with id 1
+16 Apr 2024 15:55:54,535 TRACE org.example.JdbcUtils 48 getConnection - Enter
+16 Apr 2024 15:55:54,535 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7347f129)
+16 Apr 2024 15:55:54,535 TRACE org.example.repository.TrialDBRepository 55 findByIdTrial - Enter finding task with id 1 
+16 Apr 2024 15:55:54,536 TRACE org.example.JdbcUtils 48 getConnection - Enter
+16 Apr 2024 15:55:54,536 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+16 Apr 2024 15:55:54,536 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:D:/downloads/Faculta_2_Sem_2/MPP/BazaDeDateConcursInot/identifier.sqlite
+16 Apr 2024 15:55:54,536 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+16 Apr 2024 15:55:54,536 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+16 Apr 2024 15:55:54,537 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@280ddbb7)
+16 Apr 2024 15:55:54,540 TRACE org.example.repository.TrialDBRepository 71 findByIdTrial - Exit with(Type: Distance Details: 50m)
+16 Apr 2024 15:55:54,540 TRACE org.example.repository.ParticipantDBRepository 113 findParticipantTrialsById - Exit with([Type: Distance Details: 50m])
+16 Apr 2024 15:55:54,541 TRACE org.example.repository.ParticipantDBRepository 99 findParticipantTrialsById - Enter finding trials for participant with id 2
+16 Apr 2024 15:55:54,541 TRACE org.example.JdbcUtils 48 getConnection - Enter
+16 Apr 2024 15:55:54,541 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7347f129)
+16 Apr 2024 15:55:54,542 TRACE org.example.repository.TrialDBRepository 55 findByIdTrial - Enter finding task with id 1 
+16 Apr 2024 15:55:54,542 TRACE org.example.JdbcUtils 48 getConnection - Enter
+16 Apr 2024 15:55:54,542 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@280ddbb7)
+16 Apr 2024 15:55:54,542 TRACE org.example.repository.TrialDBRepository 71 findByIdTrial - Exit with(Type: Distance Details: 50m)
+16 Apr 2024 15:55:54,542 TRACE org.example.repository.TrialDBRepository 55 findByIdTrial - Enter finding task with id 2 
+16 Apr 2024 15:55:54,543 TRACE org.example.JdbcUtils 48 getConnection - Enter
+16 Apr 2024 15:55:54,543 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@280ddbb7)
+16 Apr 2024 15:55:54,543 TRACE org.example.repository.TrialDBRepository 71 findByIdTrial - Exit with(Type: Distance Details: 200m)
+16 Apr 2024 15:55:54,543 TRACE org.example.repository.ParticipantDBRepository 113 findParticipantTrialsById - Exit with([Type: Distance Details: 50m, Type: Distance Details: 200m])
+16 Apr 2024 15:55:54,549 TRACE org.example.repository.ParticipantDBRepository 137 findAllParticipant - Exit with([Id=1 Radu 20 [Type: Distance Details: 50m], Id=2 Marean 25 [Type: Distance Details: 50m, Type: Distance Details: 200m]])
+16 Apr 2024 15:57:05,995 INFO  org.example.repository.OrganizerDBRepository 22 <init> - Initializing OrganizerDBRepository with properties: {jdbc.url=jdbc:sqlite:D:/downloads/Faculta_2_Sem_2/MPP/BazaDeDateConcursInot/identifier.sqlite} 
+16 Apr 2024 15:57:05,998 INFO  org.example.repository.TrialDBRepository 23 <init> - Initializing TrialDBRepository with properties: {jdbc.url=jdbc:sqlite:D:/downloads/Faculta_2_Sem_2/MPP/BazaDeDateConcursInot/identifier.sqlite} 
+16 Apr 2024 15:57:05,999 INFO  org.example.repository.ParticipantDBRepository 24 <init> - Initializing ParticipantDBRepository with properties: {jdbc.url=jdbc:sqlite:D:/downloads/Faculta_2_Sem_2/MPP/BazaDeDateConcursInot/identifier.sqlite} 
+16 Apr 2024 15:57:11,150 TRACE org.example.repository.OrganizerDBRepository 77 findByUsernameOrganizer - Enter finding organizer task with username Rares 
+16 Apr 2024 15:57:11,150 TRACE org.example.JdbcUtils 48 getConnection - Enter
+16 Apr 2024 15:57:11,150 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+16 Apr 2024 15:57:11,150 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:D:/downloads/Faculta_2_Sem_2/MPP/BazaDeDateConcursInot/identifier.sqlite
+16 Apr 2024 15:57:11,150 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+16 Apr 2024 15:57:11,151 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+16 Apr 2024 15:57:11,279 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@69eab8cc)
+16 Apr 2024 15:57:11,286 TRACE org.example.repository.OrganizerDBRepository 93 findByUsernameOrganizer - Exit with(Id=1 Rares 123)
+16 Apr 2024 15:57:11,313 TRACE org.example.repository.ParticipantDBRepository 120 findAllParticipant - Enter
+16 Apr 2024 15:57:11,313 TRACE org.example.JdbcUtils 48 getConnection - Enter
+16 Apr 2024 15:57:11,313 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+16 Apr 2024 15:57:11,313 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:D:/downloads/Faculta_2_Sem_2/MPP/BazaDeDateConcursInot/identifier.sqlite
+16 Apr 2024 15:57:11,314 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+16 Apr 2024 15:57:11,314 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+16 Apr 2024 15:57:11,315 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7347f129)
+16 Apr 2024 15:57:11,315 TRACE org.example.repository.ParticipantDBRepository 99 findParticipantTrialsById - Enter finding trials for participant with id 1
+16 Apr 2024 15:57:11,315 TRACE org.example.JdbcUtils 48 getConnection - Enter
+16 Apr 2024 15:57:11,316 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7347f129)
+16 Apr 2024 15:57:11,316 TRACE org.example.repository.TrialDBRepository 55 findByIdTrial - Enter finding task with id 1 
+16 Apr 2024 15:57:11,316 TRACE org.example.JdbcUtils 48 getConnection - Enter
+16 Apr 2024 15:57:11,316 TRACE org.example.JdbcUtils 25 getNewConnection - Enter
+16 Apr 2024 15:57:11,316 INFO  org.example.JdbcUtils 30 getNewConnection - trying to connect to database ... jdbc:sqlite:D:/downloads/Faculta_2_Sem_2/MPP/BazaDeDateConcursInot/identifier.sqlite
+16 Apr 2024 15:57:11,316 INFO  org.example.JdbcUtils 31 getNewConnection - user: null
+16 Apr 2024 15:57:11,316 INFO  org.example.JdbcUtils 32 getNewConnection - pass: null
+16 Apr 2024 15:57:11,317 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@280ddbb7)
+16 Apr 2024 15:57:11,318 TRACE org.example.repository.TrialDBRepository 71 findByIdTrial - Exit with(Type: Distance Details: 50m)
+16 Apr 2024 15:57:11,318 TRACE org.example.repository.ParticipantDBRepository 113 findParticipantTrialsById - Exit with([Type: Distance Details: 50m])
+16 Apr 2024 15:57:11,318 TRACE org.example.repository.ParticipantDBRepository 99 findParticipantTrialsById - Enter finding trials for participant with id 2
+16 Apr 2024 15:57:11,318 TRACE org.example.JdbcUtils 48 getConnection - Enter
+16 Apr 2024 15:57:11,319 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7347f129)
+16 Apr 2024 15:57:11,319 TRACE org.example.repository.TrialDBRepository 55 findByIdTrial - Enter finding task with id 1 
+16 Apr 2024 15:57:11,319 TRACE org.example.JdbcUtils 48 getConnection - Enter
+16 Apr 2024 15:57:11,319 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@280ddbb7)
+16 Apr 2024 15:57:11,319 TRACE org.example.repository.TrialDBRepository 71 findByIdTrial - Exit with(Type: Distance Details: 50m)
+16 Apr 2024 15:57:11,320 TRACE org.example.repository.TrialDBRepository 55 findByIdTrial - Enter finding task with id 2 
+16 Apr 2024 15:57:11,320 TRACE org.example.JdbcUtils 48 getConnection - Enter
+16 Apr 2024 15:57:11,320 TRACE org.example.JdbcUtils 57 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@280ddbb7)
+16 Apr 2024 15:57:11,320 TRACE org.example.repository.TrialDBRepository 71 findByIdTrial - Exit with(Type: Distance Details: 200m)
+16 Apr 2024 15:57:11,320 TRACE org.example.repository.ParticipantDBRepository 113 findParticipantTrialsById - Exit with([Type: Distance Details: 50m, Type: Distance Details: 200m])
+16 Apr 2024 15:57:11,323 TRACE org.example.repository.ParticipantDBRepository 137 findAllParticipant - Exit with([Id=1 Radu 20 [Type: Distance Details: 50m], Id=2 Marean 25 [Type: Distance Details: 50m, Type: Distance Details: 200m]])
