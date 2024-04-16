@@ -36,6 +36,7 @@ public class MainUI extends Application {
         stage.setScene(scene);
         stage.show();
     }
+    //Main
     public static void main(String[] args) {
         launch();
     }
