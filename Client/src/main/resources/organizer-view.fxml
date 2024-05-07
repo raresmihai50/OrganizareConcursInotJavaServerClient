@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="568.0" prefWidth="965.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.gui.OrganizerViewController">
+   <children>
+      <Label fx:id="organizer_username_lbl" layoutX="18.0" layoutY="14.0" prefHeight="47.0" prefWidth="238.0">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <TableView fx:id="participantsTable" layoutX="18.0" layoutY="61.0" prefHeight="302.0" prefWidth="932.0">
+        <columns>
+          <TableColumn fx:id="id_col" prefWidth="106.20001602172852" text="id" />
+          <TableColumn fx:id="name_col" prefWidth="178.8000030517578" text="name" />
+            <TableColumn fx:id="age_col" prefWidth="94.19998168945312" text="age" />
+            <TableColumn fx:id="trials_col" prefWidth="547.4000549316406" text="trials" />
+        </columns>
+      </TableView>
+      <Button fx:id="addParticipant_btn" layoutX="18.0" layoutY="383.0" mnemonicParsing="false" onAction="#handleAddParticipant" text="Add Participant" />
+      <Button fx:id="logout_btn" layoutX="18.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleLogOut" text="Log Out" />
+      <Button fx:id="reload_btn" layoutX="137.0" layoutY="383.0" mnemonicParsing="false" onAction="#handleReload" prefHeight="26.0" prefWidth="73.0" text="Reload" />
+      <Button fx:id="search_btn" layoutX="111.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleSearchBtn" prefHeight="26.0" prefWidth="59.0" text="Search" />
+   </children>
+</AnchorPane>

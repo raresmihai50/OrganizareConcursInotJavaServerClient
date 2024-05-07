@@ -1,2 +1,9 @@
 rootProject.name = 'OrganizareConcursInot'
+include 'Service'
+include 'Persistance'
+include 'Services'
+include 'Networking'
+include 'Client'
+include 'Model'
+include 'Server'
 

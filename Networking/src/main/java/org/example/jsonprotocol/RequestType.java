@@ -1,0 +1,5 @@
+package org.example.jsonprotocol;
+
+public enum RequestType {
+    LOGIN, LOGOUT, ADD_PARTICIPANT, GET_PARTICIPANTS, GET_PARTICIPANTS_FILTERED,GET_TRIAL_BY_TYPE_DETAILS;
+}

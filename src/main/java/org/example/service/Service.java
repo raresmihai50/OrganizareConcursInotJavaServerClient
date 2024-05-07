@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Service {
+public class Service implements IService {
     OrganizerDBRepository orgRepo;
     TrialDBRepository trRepo;
     ParticipantDBRepository partRepo;
