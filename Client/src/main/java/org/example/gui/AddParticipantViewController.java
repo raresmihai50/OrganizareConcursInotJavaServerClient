@@ -14,7 +14,7 @@ import java.util.Random;
 
 import static java.lang.Integer.parseInt;
 
-public class AddParticipantViewController { //TODO implements IObserver ???
+public class AddParticipantViewController {
     @FXML
     TextField name_txtfld;
     @FXML

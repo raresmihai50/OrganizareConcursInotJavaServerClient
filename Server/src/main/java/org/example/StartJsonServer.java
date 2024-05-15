@@ -20,10 +20,12 @@ public class StartJsonServer {
             System.err.println("Cannot find server.properties "+e);
             return;
         }
-        OrganizerDBRepository orgRepo = new OrganizerDBRepository(serverProps);
+        //OrganizerDBRepository orgRepo = new OrganizerDBRepository(serverProps);
+        OrganizerORMRepository orgRepo = new OrganizerORMRepository(serverProps);
         TrialDBRepository trRepo = new TrialDBRepository(serverProps);
         ParticipantDBRepository partRepo = new ParticipantDBRepository(serverProps, trRepo);
         IService serverImpl=new ServiceImpl(orgRepo, partRepo, trRepo);
+
         int chatServerPort=defaultPort;
         try {
             chatServerPort = Integer.parseInt(serverProps.getProperty("server.port"));

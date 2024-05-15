@@ -2,7 +2,14 @@ package org.example;
 
 import java.io.Serializable;
 
-public class Organizer implements Entity<Integer>, Serializable {
+import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+
+import static jakarta.persistence.GenerationType.IDENTITY;
+
+@Entity
+@Table(name = "Organizer")
+public class Organizer implements org.example.Entity<Integer>, Serializable {
     private int id;
     private String username;
     private String password;
@@ -13,12 +20,16 @@ public class Organizer implements Entity<Integer>, Serializable {
         this.username = username;
     }
 
-    public Organizer(String username, String password){
+    public Organizer(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
-    @Override
+    public Organizer() {
+    }
+
+    @Id
+    @GeneratedValue(generator = "increment")
     public Integer getId() {
         return id;
     }
@@ -27,7 +38,7 @@ public class Organizer implements Entity<Integer>, Serializable {
     public void setId(Integer integer) {
         id = integer;
     }
-
+    @Column(name = "username")
     public String getUsername() {
         return username;
     }
@@ -36,12 +47,17 @@ public class Organizer implements Entity<Integer>, Serializable {
         username = string;
     }
 
+    @Column(name = "password")
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String string) {
         password = string;
+    }
+    @Override
+    public int hashCode() {
+        return java.util.Objects.hash(getId());
     }
 
     @Override

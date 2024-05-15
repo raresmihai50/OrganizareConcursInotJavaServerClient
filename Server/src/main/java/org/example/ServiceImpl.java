@@ -8,12 +8,19 @@ import java.util.concurrent.Executors;
 
 public class ServiceImpl implements IService {
 
-    OrganizerDBRepository orgRepo;
+    //OrganizerDBRepository orgRepo;
     ParticipantDBRepository partRepo;
     TrialDBRepository trRepo;
+    OrganizerORMRepository orgRepo;
     private Map<String, IObserver> loggedOrganizers;
 
-    public ServiceImpl(OrganizerDBRepository orgRepo, ParticipantDBRepository partRepo, TrialDBRepository trRepo) {
+    /*public ServiceImpl(OrganizerDBRepository orgRepo, ParticipantDBRepository partRepo, TrialDBRepository trRepo) {
+        this.orgRepo = orgRepo;
+        this.partRepo = partRepo;
+        this.trRepo = trRepo;
+        this.loggedOrganizers = new ConcurrentHashMap<>();
+    }*/
+    public ServiceImpl(OrganizerORMRepository orgRepo, ParticipantDBRepository partRepo, TrialDBRepository trRepo) {
         this.orgRepo = orgRepo;
         this.partRepo = partRepo;
         this.trRepo = trRepo;
