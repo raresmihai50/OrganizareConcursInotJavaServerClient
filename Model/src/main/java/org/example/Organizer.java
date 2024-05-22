@@ -5,8 +5,6 @@ import java.io.Serializable;
 import jakarta.persistence.*;
 import jakarta.persistence.Entity;
 
-import static jakarta.persistence.GenerationType.IDENTITY;
-
 @Entity
 @Table(name = "Organizer")
 public class Organizer implements org.example.Entity<Integer>, Serializable {
@@ -38,6 +36,7 @@ public class Organizer implements org.example.Entity<Integer>, Serializable {
     public void setId(Integer integer) {
         id = integer;
     }
+
     @Column(name = "username")
     public String getUsername() {
         return username;
@@ -55,6 +54,7 @@ public class Organizer implements org.example.Entity<Integer>, Serializable {
     public void setPassword(String string) {
         password = string;
     }
+
     @Override
     public int hashCode() {
         return java.util.Objects.hash(getId());

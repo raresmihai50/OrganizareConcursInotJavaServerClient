@@ -21,7 +21,7 @@ public class StartJsonServer {
             return;
         }
         //OrganizerDBRepository orgRepo = new OrganizerDBRepository(serverProps);
-        OrganizerORMRepository orgRepo = new OrganizerORMRepository(serverProps);
+        OrganizerORMRepository orgRepo = new OrganizerORMRepository();
         TrialDBRepository trRepo = new TrialDBRepository(serverProps);
         ParticipantDBRepository partRepo = new ParticipantDBRepository(serverProps, trRepo);
         IService serverImpl=new ServiceImpl(orgRepo, partRepo, trRepo);

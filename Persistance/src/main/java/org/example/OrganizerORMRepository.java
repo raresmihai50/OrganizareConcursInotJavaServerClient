@@ -1,4 +1,5 @@
 package org.example;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
@@ -15,9 +16,9 @@ public class OrganizerORMRepository implements OrganizerRepository<Organizer, In
     static SessionFactory sessionFactory;
     private static final Logger logger = LogManager.getLogger();
 
-    public OrganizerORMRepository(Properties props) {
-        logger.info("Initializing OrganizerORMRepository with properties: {} ", props);
-        dbUtils = new JdbcUtils(props);
+    public OrganizerORMRepository(){//Properties props) {
+        logger.info("Initializing OrganizerORMRepository ");
+        //dbUtils = new JdbcUtils(props);
     }
     @Override
     public void addOrganizer(Organizer elem) {
